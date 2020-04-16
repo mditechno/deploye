@@ -1,0 +1,31 @@
+<ion-toolbar color="dark">
+  <ion-title color="warning">{{ category.name }}</ion-title>
+  <ion-button slot="end" color='black' (click)="closeModal()">
+    <ion-icon color="light" name="close"></ion-icon>
+  </ion-button>
+</ion-toolbar>
+  
+<ion-content color="dark" class="ion-padding">
+  <ion-searchbar placeholder="Que voulez-vous acheter ?" (input)="onInputSearch($event)"></ion-searchbar>
+  <ion-text>
+    <ion-icon slot="end" name="add"></ion-icon>
+  </ion-text>
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-label>Sélectionner vos articles</ion-label>
+    </ion-card-header>
+    <ion-card-content *ngIf="articles">
+      <ion-list>
+        <ion-item *ngFor="let article of articles">
+          <ion-label color="dark">{{ article.name}}</ion-label>
+          <ion-toggle color="tertiary" [checked]="checkInCart(article.name)" (click)="toggleArticleInCart(article)"></ion-toggle>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <!--ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success">      
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-->
+</ion-content>

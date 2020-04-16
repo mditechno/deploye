@@ -1,0 +1,7 @@
+{
+  "name": "easyListe",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

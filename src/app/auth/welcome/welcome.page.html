@@ -1,0 +1,46 @@
+<ion-content class="ion-padding">
+  <ion-slides pager [options]="slideOpts">
+    <ion-slide>
+      <ion-text color="warning">
+        <h2>EasyList</h2>
+      </ion-text>
+
+      <ion-text color="light" class="ion-padding">
+        <h1>Bienvenue</h1>
+      </ion-text>
+
+      <ion-text color="light">
+        Avec EasyList vous gérez vos listes de courses.
+      </ion-text>
+      
+    </ion-slide>
+
+    <ion-slide >
+      <ion-text color="warning">
+        <h2>EasyList</h2>
+      </ion-text>
+
+      <h1><ion-icon name="share"></ion-icon></h1>
+
+      <ion-text color="light" class="ion-padding">
+        Vous pouvez envoyer votre liste par e-mail.
+      </ion-text>
+    </ion-slide>
+
+    <ion-slide >
+      <ion-text color="warning">
+        <h2>EasyList</h2>
+      </ion-text>
+
+      <h2></h2>
+
+      <ion-text color="light" class="ion-padding">
+        Terminer.
+      </ion-text>
+    </ion-slide>
+  </ion-slides>
+  <ion-button color="warning" expand="block" share="round" (click)="navigateToLogin()">
+    <ion-label>Commencer</ion-label>
+    <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+    </ion-button>
+</ion-content>

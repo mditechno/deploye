@@ -1,0 +1,119 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+}
+
+ion-card{
+    &.ion-color-light{
+        background-color: #eae9e9 !important;
+        color: rgb(44, 44, 44) !important;
+    }
+    ion-card-content{
+        ion-text, ion-label{
+            font-size: small !important;
+        }
+        ion-button{
+            ion-label{
+                font-size: medium !important;
+                vertical-align: middle !important;
+            }
+            ion-icon{
+                vertical-align: middle !important;
+            }
+        }
+        &.scroll-block{
+            max-height: 200px;
+            overflow-y: scroll;
+        }
+    }
+}
+ion-toolbar{
+    padding: 0 15px !important;
+}
+ion-list{ 
+    ion-item{
+        font-size: small !important;
+    }
+}
+ion-item-group{
+    ion-item-divider{
+        font-size: small !important;
+    }
+}
+ion-slides{
+    .swiper-pagination-bullet{
+        background-color: white !important;
+    }
+    .swiper-pagination-bullet-active{
+        background-color: #ffc409 !important;
+    }
+}
+ion-searchbar{
+    font-size: small !important;
+}
+
+ion-tab-button{
+    &.tab-selected{
+        ion-label{
+            color: var(--ion-color-warning);
+        }
+
+        ion-icon{
+            color: var(--ion-color-warning);
+        }
+    }
+}
+
+/** Custom scss */
+.action-sheet-group {
+    background-color: white !important;
+    .facebookIcon {
+        ion-icon{
+          color:  var(--ion-color-primary) !important;
+        }
+      }
+      .whatsappIcon {
+        ion-icon {
+          color: var(--ion-color-success) !important;
+        }
+      }
+      .twitterIcon {
+        ion-icon{
+          color: var(--ion-color-secondary) !important;
+        }
+      }
+}
+.list-thumbnail{
+    margin : 5px;
+    display : inline-block;
+    vertical-align: top;
+    ion-label{
+        font-size: 9px !important;
+    }
+}
