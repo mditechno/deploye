@@ -1,2 +1,2 @@
 # deploye
-deploye apps
+deploye apps v2
